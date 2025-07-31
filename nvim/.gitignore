@@ -1,0 +1,13 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+*.swp
+*.swo
+*.undo
+*.backup
+lazy-lock.json
