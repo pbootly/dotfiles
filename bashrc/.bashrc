@@ -11,3 +11,9 @@ fi
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+
+# SSH
+if [ -f ~/.ssh/id_rsa ]; then
+  eval "$(ssh-agent -s)" >/dev/null 2>&1
+  ssh-add -l | grep -q 'id_rsa' || ssh-add ~/.ssh/id_rsa
+fi
