@@ -1,10 +1,8 @@
 return {
   {
-    "folke/tokyonight.nvim",
+    "shaunsingh/nord.nvim",
     config = function()
-      vim.g.tokyonight_style = "storm"
-      vim.cmd([[colorscheme tokyonight]])
+      vim.cmd([[colorscheme nord]])
     end,
   },
 }
-
