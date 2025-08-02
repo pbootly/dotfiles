@@ -6,7 +6,7 @@ cp_wezterm_wsl() {
 
   DOTFILES="${HOME}/dotfiles"
 
-  SRC="${DOTFILES}/wezterm/wezterm.lua"
+  SRC="${DOTFILES}/wezterm/.config/wezterm/wezterm.lua"
   DEST="${WIN_HOME}/.wezterm.lua"
 
   if [ -f "${DEST}" ] && [ ! -L "${DEST}" ]; then
