@@ -12,6 +12,10 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
 
+# Odin
+export ODIN_ROOT=$HOME/Odin
+export PATH=$PATH:$ODIN_ROOT
+
 # SSH
 if [ -f ~/.ssh/id_rsa ]; then
   eval "$(ssh-agent -s)" >/dev/null 2>&1
