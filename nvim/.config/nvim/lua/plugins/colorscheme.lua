@@ -1,8 +1,8 @@
 return {
   {
-    "shaunsingh/nord.nvim",
+    "EdenEast/nightfox.nvim",
     config = function()
-      vim.cmd([[colorscheme nord]])
+      vim.cmd([[colorscheme terafox]])
     end,
   },
 }
