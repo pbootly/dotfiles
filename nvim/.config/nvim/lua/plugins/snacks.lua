@@ -1,6 +1,9 @@
 return {
-  {
-    "folke/snacks.nvim",
-    enable = false,
+  "folke/snacks.nvim",
+  keys = {
+    { "<leader>fe", false },
+    { "<leader>fE", false },
+    { "<leader>e", false },
+    { "<leader>E", false },
   },
 }
