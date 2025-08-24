@@ -1,18 +1,18 @@
 local wezterm = require("wezterm")
 
-local launc_menu = {}
+local launch_menu = {}
 
 if wezterm.target_triple == "x86_64-pc-windows-msvc" then
-	table.insert(launc_menu, {
+	table.insert(launch_menu, {
 		label = "WSL: Ubuntu",
-		args = { "wsl.exe" },
+		args = { "wsl.exe", "--cd", "~" },
 	})
 end
 
 return {
-	color_scheme = "nord",
+	color_scheme = "terafox",
 	font = wezterm.font("ComicShanns Nerd Font", { weight = "Regular" }),
-	font_size = 11,
+	font_size = 13,
 	default_prog = (wezterm.target_triple == "x86_64-pc-windows-msvc") and { "wsl.exe" } or nil,
 	enable_tab_bar = true,
 	hide_tab_bar_if_only_one_tab = true,
