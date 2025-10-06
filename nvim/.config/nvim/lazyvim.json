@@ -1,11 +1,10 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.copilot",
     "lazyvim.plugins.extras.editor.harpoon2"
   ],
   "install_version": 8,
   "news": {
-    "NEWS.md": "10960"
+    "NEWS.md": "11866"
   },
   "version": 8
 }
