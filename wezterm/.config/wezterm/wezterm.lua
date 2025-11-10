@@ -10,7 +10,7 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 end
 
 return {
-	color_scheme = "terafox",
+	color_scheme = "citruszest",
 	font = wezterm.font("ComicShanns Nerd Font", { weight = "Regular" }),
 	font_size = 13,
 	default_prog = (wezterm.target_triple == "x86_64-pc-windows-msvc") and { "wsl.exe" } or nil,
