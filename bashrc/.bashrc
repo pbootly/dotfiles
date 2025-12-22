@@ -1,6 +1,9 @@
 # Non interactive return
 [[ $- != *i* ]] && return
 
+# Bob
+export PATH="$PATH:/Users/pbootly/.local/bin"
+
 # Neovim
 if command -v nvim >/dev/null 2>&1; then
   export EDITOR=nvim
@@ -22,3 +25,4 @@ if [ -f ~/.ssh/id_rsa ]; then
   ssh-add -l | grep -q 'id_rsa' || ssh-add ~/.ssh/id_rsa
 fi
 . "$HOME/.cargo/env"
+
