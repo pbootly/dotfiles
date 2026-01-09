@@ -2,12 +2,12 @@
 [[ $- != *i* ]] && return
 
 # Bob
-export PATH="$PATH:/Users/pbootly/.local/bin"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin"
 
 # Neovim
 if command -v nvim >/dev/null 2>&1; then
-  export EDITOR=nvim
-  alias vim='nvim'
+	export EDITOR=nvim
+	alias vim='nvim'
 fi
 
 # Golang
@@ -21,8 +21,7 @@ export PATH=$PATH:$ODIN_ROOT
 
 # SSH
 if [ -f ~/.ssh/id_rsa ]; then
-  eval "$(ssh-agent -s)" >/dev/null 2>&1
-  ssh-add -l | grep -q 'id_rsa' || ssh-add ~/.ssh/id_rsa
+	eval "$(ssh-agent -s)" >/dev/null 2>&1
+	ssh-add -l | grep -q 'id_rsa' || ssh-add ~/.ssh/id_rsa
 fi
 . "$HOME/.cargo/env"
-
