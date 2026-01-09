@@ -10,9 +10,9 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
 end
 
 return {
-  color_scheme = "tempus_spring",
-  font = wezterm.font("ComicShanns Nerd Font", { weight = "Bold" }),
-  font_size = 17,
+  color_scheme = "kanagawa_dark",
+  font = wezterm.font("ComicShanns Nerd Font", { weight = "Regular" }),
+  font_size = 18,
   default_prog = (wezterm.target_triple == "x86_64-pc-windows-msvc") and { "wsl.exe" } or nil,
   enable_tab_bar = true,
   hide_tab_bar_if_only_one_tab = true,
