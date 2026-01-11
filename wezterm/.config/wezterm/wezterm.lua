@@ -9,6 +9,20 @@ if wezterm.target_triple == "x86_64-pc-windows-msvc" then
   })
 end
 
+local act = wezterm.action
+
+wezterm.on("toggle-colorscheme", function(window, _)
+  local overrides = window:get_config_overrides() or {}
+
+  if overrides.color_scheme == "kanagawa_light" then
+    overrides.color_scheme = "kanagawa_dark"
+  else
+    overrides.color_scheme = "kanagawa_light"
+  end
+
+  window:set_config_overrides(overrides)
+end)
+
 return {
   color_scheme = "kanagawa_dark",
   font = wezterm.font("ComicShanns Nerd Font", { weight = "Regular" }),
@@ -17,4 +31,11 @@ return {
   enable_tab_bar = true,
   hide_tab_bar_if_only_one_tab = true,
   audible_bell = "Disabled",
+  keys = {
+    {
+      key = "B",
+      mods = "CTRL|SHIFT",
+      action = act.EmitEvent("toggle-colorscheme"),
+    },
+  },
 }
